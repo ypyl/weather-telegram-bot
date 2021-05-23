@@ -11,6 +11,7 @@ Tiny Telegram Bot to send weather info based on user location
 - WEATHER_API_KEY = [weather api](https://www.weatherapi.com) key
 
 `weather-bot.py` contains the logic of the bot
+
 `deploy.py` is a small helper to deploy the bot to raspberry pi (as I am using it to host the bot)
 
 # Dependencies
