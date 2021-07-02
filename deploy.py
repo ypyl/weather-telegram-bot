@@ -15,22 +15,22 @@ stdin, stdout, stderr = client.exec_command(
 stdin, stdout, stderr = client.exec_command(
     'sudo systemctl disable weather-bot.service')
 # give time raspberry to disable service
-time.sleep(5)
+# time.sleep(5)
 
-client_sftp.put('./weather-bot.py', './weather-bot.py')
-client_sftp.put('./configuration.py', './configuration.py')
-client_sftp.put('./weather-bot.service',
-                './weather-bot.service')
+# client_sftp.put('./weather-bot.py', './weather-bot.py')
+# client_sftp.put('./configuration.py', './configuration.py')
+# client_sftp.put('./weather-bot.service',
+#                 './weather-bot.service')
 
-stdin, stdout, stderr = client.exec_command(
-    'sudo rm /lib/systemd/system/weather-bot.service')
-stdin, stdout, stderr = client.exec_command(
-    'sudo cp -R ./weather-bot.service /lib/systemd/system/weather-bot.service')
-stdin, stdout, stderr = client.exec_command(
-    'sudo chmod 644 /lib/systemd/system/weather-bot.service')
-stdin, stdout, stderr = client.exec_command('chmod +x /home/pi/weather-bot.py')
-stdin, stdout, stderr = client.exec_command('sudo systemctl daemon-reload')
-stdin, stdout, stderr = client.exec_command(
-    'sudo systemctl enable weather-bot.service')
-stdin, stdout, stderr = client.exec_command(
-    'sudo systemctl start weather-bot.service')
+# stdin, stdout, stderr = client.exec_command(
+#     'sudo rm /lib/systemd/system/weather-bot.service')
+# stdin, stdout, stderr = client.exec_command(
+#     'sudo cp -R ./weather-bot.service /lib/systemd/system/weather-bot.service')
+# stdin, stdout, stderr = client.exec_command(
+#     'sudo chmod 644 /lib/systemd/system/weather-bot.service')
+# stdin, stdout, stderr = client.exec_command('chmod +x /home/pi/weather-bot.py')
+# stdin, stdout, stderr = client.exec_command('sudo systemctl daemon-reload')
+# stdin, stdout, stderr = client.exec_command(
+#     'sudo systemctl enable weather-bot.service')
+# stdin, stdout, stderr = client.exec_command(
+#     'sudo systemctl start weather-bot.service')
